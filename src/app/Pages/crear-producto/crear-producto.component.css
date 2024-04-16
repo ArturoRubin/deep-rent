@@ -1,0 +1,27 @@
+.first-group,
+.second-area {
+    width: 50%;
+    /* Ancho al 50% del contenedor padre */
+    float: left;
+    /* Alineación lado a lado */
+    padding: 10px;
+}
+
+mat-form-field {
+    width: 100%;
+    /* Ancho al 100% de su contenedor */
+}
+
+/* Asegúrate de limpiar el float después de los grupos */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.submit {
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

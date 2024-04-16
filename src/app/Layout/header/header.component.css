@@ -1,0 +1,21 @@
+header{
+    background-color: #2E3336;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+img{
+    height: 100px;
+}
+
+.registerButtons a {
+    margin-left: 25px; /* Espacio entre los botones */
+    text-decoration: none; /* Quitar subrayado de los enlaces */
+    color: white; /* Color del texto */
+    padding: 10px 20px; /* Espaciado interno de los botones */
+    border: 1px solid seashell; /* Borde del botón */
+    border-radius: 5px; /* Esquinas redondeadas */
+    transition: all 0.3s ease; /* Transición suave */
+    margin-right: 20px;
+  }

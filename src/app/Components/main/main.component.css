@@ -1,0 +1,64 @@
+.main {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/images/first-pic.jpeg');
+    background-position: center;
+}
+
+
+.half-section {
+    width: 50%;
+    display: inline-block;
+    padding: 40px;
+    text-align: center;
+    height: 100vh;
+}
+
+/* Estilos para el título */
+.half-section h2 {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Estilos para el botón */
+.half-section .btn {
+    display: inline-block;
+    background-color: transparent;
+    border: 3px solid white;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilos de hover para el botón */
+.half-section .btn:hover {
+    background-color: #FF874A;
+}
+
+/* Estilos de hover para resaltar la sección */
+.half-section:hover {
+    transform: scale(1.2);
+    /* Aumenta el tamaño del contenido al 110% */
+
+}
+
+.first-section,
+.second-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Centra horizontalmente */
+    align-items: center;
+    /* Centra verticalmente */
+    height: 100%;
+    /* Establece la altura al 100% del contenedor padre (.half-section) */
+}
+
+.first-section h2,
+.second-section h2,
+.first-section .btn,
+.second-section .btn {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 10);
+    /* Sombreado con desplazamiento de 2px horizontal y vertical, desenfoque de 4px y color semitransparente */
+}

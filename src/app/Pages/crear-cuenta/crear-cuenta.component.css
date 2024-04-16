@@ -1,0 +1,61 @@
+
+.container {
+    max-width: 400px;
+    padding: 20px;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    /* Agregar sombra */
+    height: 70vh;
+    display: flex;
+    /* Utilizamos flexbox */
+    flex-direction: column;
+    /* Alinear los elementos en columna */
+    justify-content: center;
+    margin-top: 10vh; /* Agregar un margen superior de 10% del viewport height */
+    margin-bottom: 10vh;
+}
+
+.center {
+    text-align: center;
+    padding: 30px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contenedor-boton {
+    display: flex;
+    /* Utilizamos flexbox */
+    justify-content: center;
+    /* Centramos horizontalmente */
+    padding: 20px 0;
+}
+
+/*
+.btn-primary {
+    color: white;
+    background-color: #FF874A;
+    border-color: #FF874A;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #fa6014;
+}
+*/
+
