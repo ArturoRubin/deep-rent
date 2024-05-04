@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.padre {
+    display: flex;
+}
+
+.navbar {
+    background-color: #2E3336;
+    width: 200px;
+    height: 100vh; /* Esto asegura que el menú ocupe toda la altura de la ventana */
+    padding-top: 20px;
+    position: fixed; /* Esto mantiene el menú fijo en la pantalla mientras se desplaza */
+}
+
+.navbar a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #555; /* Color de fondo al pasar el mouse sobre las opciones */
+}
+
+.dashboard {
+    flex: 1; /* Esto hace que el panel de control ocupe el espacio restante */
+    padding-left: 220px; /* Esto asegura que el contenido del panel de control no esté oculto debajo del menú */
+}

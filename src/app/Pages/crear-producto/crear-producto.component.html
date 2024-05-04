@@ -1,40 +1,42 @@
-<button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
-    {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
-</button>
+
 <mat-stepper [linear]="isLinear" #stepper>
-    <mat-step [stepControl]="firstFormGroup">
-        <form [formGroup]="firstFormGroup">
+    <mat-step [stepControl]="formInformacionGeneral">
+        <form [formGroup]="formInformacionGeneral">
             <ng-template matStepLabel>Información General</ng-template>
             <div class="first-group clearfix">
                 <div>
                     <mat-form-field>
                         <mat-label>Nombre de la máquina</mat-label>
-                        <input matInput formControlName="firstCtrl" required>
+                        <input matInput formControlName="nombreMaquina" required>
                     </mat-form-field>
                 </div>
                 <div>
                     <mat-form-field>
-                        <mat-label>Marca y Modelo</mat-label>
-                        <input matInput formControlName="firstCtrl" required>
+                        <mat-label>Marca</mat-label>
+                        <input matInput formControlName="marca" required>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field>
+                        <mat-label>Modelo</mat-label>
+                        <input matInput formControlName="modelo" required>
                     </mat-form-field>
                 </div>
                 <div>
                     <mat-form-field>
                         <mat-label>Categoría</mat-label>
-                        <select matNativeControl formControlName="categoryCtrl" required>
-                            <option value="">Perforación</option>
-                            <option value="">Grúa</option>
-                            <option value="">Hincado</option>
-                            <option value="">Almeja Muro Milan</option>
-                        </select>
-                        <input matInput formControlName="firstCtrl" required>
+                        <select matNativeControl formControlName="categoria" required>
+                            <option value="1">Perforación</option>
+                            <option value="2">Grúa</option>
+                            <option value="3">Hincado</option>
+                            <option value="4">Almeja Muro Milan</option>
+                        </select>                        
                     </mat-form-field>
                 </div>
                 <div>
                     <mat-form-field>
                         <mat-label>Descripción</mat-label>
-                        <textarea matNativeControl formControlName="categoryCtrl" required></textarea>
-                        <input matInput formControlName="firstCtrl" required>
+                        <textarea matNativeControl formControlName="descripcion" required></textarea>
                     </mat-form-field>
                 </div>
             </div>
@@ -42,67 +44,173 @@
             <div class="second-area clearfix">
                 <div>
                     <mat-form-field>
+                        <mat-label>Tarifa mensual</mat-label>
+                        <input matInput formControlName="tarifaMensual" required>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field>
+                        <mat-label>Depósito</mat-label>
+                        <input matInput formControlName="deposito" required>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field>
                         <mat-label>Potencia</mat-label>
-                        <input matInput formControlName="firstCtrl" required>
+                        <input matInput formControlName="potencia" required>
                     </mat-form-field>
                 </div>
                 <div>
                     <mat-form-field>
                         <mat-label>Capacidad</mat-label>
-                        <input matInput formControlName="firstCtrl" required>
+                        <input matInput formControlName="capacidad" required>
                     </mat-form-field>
                 </div>
                 <div>
                     <mat-form-field>
                         <mat-label>Dimensiones</mat-label>
-                        <input matInput formControlName="firstCtrl" required>
+                        <input matInput formControlName="dimensiones" required>
                     </mat-form-field>
                 </div>
                 <div>
-                    <form action="/tu-endpoint-de-subida" method="post" enctype="multipart/form-data">
                         <label for="fileUpload">Seleccionar imágenes:</label>
                         <input type="file" id="fileUpload" name="image" accept="image/*">
-                        <input type="submit" value="Subir Imagen">
-                      </form>
+                        <input type="button" value="Subir Imagen">
                 </div>
             </div>
             <button class="submit" mat-raised-button color="primary">Siguiente</button>
         </form>
     </mat-step>
-    <mat-step [stepControl]="thirdFormGroup">
-        <form [formGroup]="thirdFormGroup">
-            <ng-template matStepLabel>Precio y Disponibilidad</ng-template>
-            <mat-form-field>
-                <mat-label>Nombre de la máquina</mat-label>
-                <input matInput formControlName="firstCtrl" required>
-            </mat-form-field>
-            <mat-form-field>
-                <mat-label>Marca y Modelo</mat-label>
-                <input matInput formControlName="firstCtrl" required>
-            </mat-form-field>
-            <div>
-                <button mat-button matStepperNext>Siguiente</button>
+    <mat-step [stepControl]="formUbicacionDisponibilidad">
+        <form [formGroup]="formUbicacionDisponibilidad">
+            <ng-template matStepLabel>Ubicación y Disponibilidad</ng-template>
+            <div class="first-group clearfix">
+                <h2>Ubicación</h2>
+                <div>
+                    <mat-form-field>
+                        <mat-label>Estado</mat-label>
+                        <input matInput formControlName="estado" required>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field>
+                        <mat-label>Dirección</mat-label>
+                        <input matInput formControlName="direccion" required>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field>
+                        <mat-label>Código Postal</mat-label>
+                        <input matInput formControlName="codigoPostal" required>
+                    </mat-form-field>
+                </div>
+                <h2>Disponibilidad</h2>
+                <div>
+                    <mat-form-field>
+                        <mat-label>Ingresa un rango de fechas</mat-label>
+                        <mat-date-range-input [rangePicker]="picker">
+                            <input matStartDate placeholder="Fecha inicial">
+                            <input matEndDate placeholder="Fecha final">
+                        </mat-date-range-input>
+
+                        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-date-range-picker #picker></mat-date-range-picker>
+                    </mat-form-field>
+                </div>
             </div>
+
+            <div class="second-area clearfix">
+                <h2>Entrega</h2>
+                <div>
+                    <mat-form-field>
+                        <mat-label>ofrecer servicio de entrega</mat-label>
+                        <select matNativeControl formControlName="servicioEntrega" required>
+                            <option value="1">Por hora</option>
+                            <option value="2">Por día</option>
+                            <option value="3">Por entrega úncia</option>
+                            <option value="4">No ofrezco envío</option>
+                        </select>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field>
+                        <mat-label>Estados cubiertos para entrega</mat-label>
+                        <select multiple matNativeControl formControlName="estados" required>
+                            <option value="Aguascalientes">Aguascalientes</option>
+                            <option value="Baja California">Baja California</option>
+                            <option value="Baja California Sur">Baja California Sur</option>
+                            <option value="Campeche">Campeche</option>
+                            <option value="Chiapas">Chiapas</option>
+                            <option value="Chihuahua">Chihuahua</option>
+                            <option value="Coahuila">Coahuila</option>
+                            <option value="Colima">Colima</option>
+                            <option value="Ciudad de México">Ciudad de México</option>
+                            <option value="Durango">Durango</option>
+                            <option value="Guanajuato">Guanajuato</option>
+                            <option value="Guerrero">Guerrero</option>
+                            <option value="Hidalgo">Hidalgo</option>
+                            <option value="Jalisco">Jalisco</option>
+                            <option value="Estado de México">Estado de México</option>
+                            <option value="Michoacán">Michoacán</option>
+                            <option value="Morelos">Morelos</option>
+                            <option value="Nayarit">Nayarit</option>
+                            <option value="Nuevo León">Nuevo León</option>
+                            <option value="Oaxaca">Oaxaca</option>
+                            <option value="Puebla">Puebla</option>
+                            <option value="Querétaro">Querétaro</option>
+                            <option value="Quintana Roo">Quintana Roo</option>
+                            <option value="San Luis Potosí">San Luis Potosí</option>
+                            <option value="Sinaloa">Sinaloa</option>
+                            <option value="Sonora">Sonora</option>
+                            <option value="Tabasco">Tabasco</option>
+                            <option value="Tamaulipas">Tamaulipas</option>
+                            <option value="Tlaxcala">Tlaxcala</option>
+                            <option value="Veracruz">Veracruz</option>
+                            <option value="Yucatán">Yucatán</option>
+                            <option value="Zacatecas">Zacatecas</option>
+                        </select>
+                    </mat-form-field>
+                </div>
+            </div>
+            <button class="submit" mat-raised-button color="primary">Siguiente</button>
         </form>
     </mat-step>
-    <mat-step [stepControl]="secondFormGroup" label="Multimedia">
-        <form [formGroup]="secondFormGroup">
-            <mat-form-field>
-                <mat-label>Address</mat-label>
-                <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY" required>
-            </mat-form-field>
-            <div>
-                <button mat-button matStepperPrevious>Back</button>
-                <button mat-button matStepperNext>Next</button>
+    <mat-step [stepControl]="formMantenimientoCuidado" label="Condiciones">
+        <form [formGroup]="formMantenimientoCuidado">
+            <div class="first-group clearfix">
+                <div>
+                    <mat-form-field>
+                        <mat-label>Mantenimiento y cuidado</mat-label>
+                        <textarea matNativeControl formControlName="mantenimiento" required></textarea>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field>
+                        <mat-label>Requisitos de Devolución</mat-label>
+                        <textarea matNativeControl formControlName="devoluciones" required></textarea>
+                    </mat-form-field>
+                </div>
             </div>
+            <div class="second-area clearfix">
+                <mat-form-field>
+                    <mat-label>Tiempo mínimo de alquiler</mat-label>
+                    <select matNativeControl formControlName="tiempoAlquiler" required>
+                        <option value="">Por día</option>
+                        <option value="">Por semana</option>
+                    </select>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Depósito de Seguridad</mat-label>
+                    <select matNativeControl formControlName="deposito" required>
+                        <option value="">Fijo</option>
+                        <option value="">Porcentaje costo de alquiler</option>
+                    </select>
+                </mat-form-field>
+            </div>
+            <a routerLink="/dashboard-arrendador">
+                <button class="submit" mat-raised-button color="primary">Publicar</button>
+            </a>
         </form>
     </mat-step>
-    <mat-step>
-        <ng-template matStepLabel>Finalizar</ng-template>
-        <p>You are now done.</p>
-        <div>
-            <button mat-button matStepperPrevious>Back</button>
-            <button mat-button (click)="stepper.reset()">Reset</button>
-        </div>
-    </mat-step>
+
 </mat-stepper>

@@ -1,0 +1,77 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    padding-top: 20px;
+  }
+  
+  .card {
+    max-width: 300px; /* Ajusta este valor para hacer los cards más pequeños */
+    margin: 10px;
+    border: 1px solid #e0e0e0;
+    transition: all 0.3s ease; /* Transición suave */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra predeterminada */
+  }
+
+  .card:hover {
+    transform: scale(1.05); /* Agrandar la tarjeta al pasar el mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Añadir una sombra más pronunciada */
+}
+
+  .card img {
+    width: 100%; /* Esto hará que la imagen ocupe todo el ancho del card */
+    height: 300px; /* Ajusta este valor para el alto deseado */
+    object-fit: cover; /* Esto asegurará que la imagen cubra el espacio asignado sin perder sus proporciones */
+  }
+
+  .example-card {
+    margin: 16px;
+  }
+
+  mat-card-header,
+mat-card-content,
+mat-card-actions {
+  margin: 8px 0;
+}
+
+.titulo{
+  margin-top: 20px;
+  margin-bottom: 0;
+  margin-left: 20px;
+}
+
+  h3{
+    margin-bottom: 20px;
+    margin-left: 20px;
+  }
+
+  .caracteristicas{
+    padding-left: 20px;
+    padding-bottom: 20px;
+  }
+
+  .disponibilidad{
+    padding-left: 20px;
+  }
+
+  .disponible{
+    color: #00A64F;
+  }
+
+  .no-disponible{
+    color: rgb(184, 0, 0);
+  }
+  
+
+  
+
+  
+
+  
+
+  
+ 
+  
+ 
+  
+  

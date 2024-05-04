@@ -1,0 +1,36 @@
+.contenedor{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    
+}
+
+.square{
+    width: calc(25vw - 4px); /* 25% del ancho de la ventana gráfica, menos 4px de los bordes */
+    max-width: 300px; /* Máximo de 300px para evitar que los elementos sean demasiado grandes */
+    height: calc(25vw - 4px); /* La misma altura que el ancho para mantener la proporción */
+    box-shadow: 3px 4px 8px 8px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box; /* Asegura que el borde esté incluido en el tamaño total */
+    border-radius: 5px;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente el contenido */
+    align-items: center; /* Centra verticalmente el contenido */
+    background-color: #2E3336;
+    color: white;
+    transition: all 0.3s ease; /* Transición suave */
+
+}
+
+.square:hover {
+    transform: scale(1.2);
+    /* Aumenta el tamaño del contenido al 110% */
+}
+
+a{
+    text-decoration: none;
+}
+
+a:visited {
+    color: inherit; /* O cualquier otro color que desees */
+}
