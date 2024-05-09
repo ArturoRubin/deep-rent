@@ -1,16 +1,169 @@
-.parent {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    }
-    
-    .div1 { grid-area: 1 / 1 / 2 / 6; }
-    .div2 { grid-area: 2 / 1 / 5 / 4; }
-    .div3 { grid-area: 2 / 4 / 5 / 6; }
-    .div4 { grid-area: 5 / 1 / 6 / 6; }
-    
-img{
-    height: 400px;
+h1 {
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+}
+
+img {
+    width: 600px;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+
+
+/* PARTE 1 */
+
+.product-section {
+    display: flex;
+}
+
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container img {
+    width: 100%;
+    /* Ajustar al tamaño deseado */
+    height: auto;
+    /* Para mantener la proporción */
+}
+
+.info-container {
+    flex: 1;
+    padding: 20px;
+}
+
+.info-box {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra predeterminada */
+    /* Efecto de sombra */
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.info-box h3 {
+    margin-top: 0;
+}
+
+/* PARTE 2 */
+
+/* izquierda */
+
+.cuadro-reservar {
+    border-radius: 10px;
+    /* Ajusta el valor para redondear más o menos los vértices */
+    background-color: #ffffff;
+    /* Color de fondo del cuadro */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    /* Efecto de sombra */
+    padding: 15px;
+    width: 350px;
+    height: 350px;
+    text-align: center;
+}
+
+.fechas {
+    display: flex;
+    justify-content: space-between;
+}
+
+.penultima-fila {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ultima-fila {
+    display: flex;
+    justify-content: space-between;
+}
+
+.boton,
+.texto-cobro {
+    width: 100%;
+    /* Expande los divs internos al 100% del ancho del padre */
+    text-align: center;
+    /* Centra el texto dentro de los divs */
+}
+
+.boton button {
+    width: 90%;
+    /* Ocupa el 90% del ancho del contenedor */
+    padding: 10px;
+    /* Añade un poco de padding para que el botón sea más grande */
+    border: none;
+    /* Elimina el borde por defecto del botón */
+    border-radius: 5px;
+    /* Redondea un poco los bordes del botón */
+    background-color: #FF874A;
+    /* Cambia el color de fondo del botón */
+    color: white;
+    /* Cambia el color del texto del botón */
+    cursor: pointer;
+    /* Cambia el cursor al pasar el ratón por encima del botón */
+    margin: 20px;
+}
+
+.boton button:hover {
+    background-color: #fe681c;
+    /* Cambia el color de fondo del botón al pasar el ratón por encima */
+}
+
+.texto-cobro {
+    font-size: .8rem;
+    color: gray;
+    margin-bottom: 20px;
+}
+
+.ultima-fila {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* derecha */
+.derecha {
+    display: flex;
+}
+
+.demo-inline-calendar-card {
+    width: 350px;
+}
+
+
+.parte2 {
+    display: flex;
+    justify-content: space-around;
+    background-color: #2E3336;
+    align-items: center;
+    height: 500px;
+    margin-top: 20px;
+}
+
+/* PARTE 3 */
+
+.parte3 {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 60px;
+    text-align: center;
+}
+
+.item {
+    border-right: 1px solid rgb(196, 196, 196);
+    padding-right: 100px;
+}
+
+
+img {
+    width: 70px;
+}
+
+/* PARTE 4 */
+
+.parte4 {
+    display: flex;
+    padding: 40px;
 }

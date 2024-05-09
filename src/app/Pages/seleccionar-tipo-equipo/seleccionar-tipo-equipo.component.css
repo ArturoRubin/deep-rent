@@ -1,24 +1,90 @@
-.contenedor{
+.master{
+    background-color: #F2F2F2;
+    margin: 0;
+}
+
+h1{
+    font-size: 1.6rem;
+    padding-bottom: 10px;
+}
+
+.search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.search-input {
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    width: 800px;
+    /* Ancho de la barra de búsqueda */
+    outline: none;
+    /* Elimina el contorno al hacer clic */
+}
+
+.search-icon {
+    padding: 10px;
+    margin-left: -40px;
+    /* Ajusta la posición del ícono */
+    cursor: pointer;
+}
+
+.barra {
+    display: flex;
+}
+
+img {
+    height: 40px;
+}
+
+.precontenedor{
+    padding: 50px;
+    text-align: center;
+}
+
+.precontenedor h2{
+    font-size: 26px;
+}
+
+.deep{
+    color: #FF874A;
+    font-weight: bold;
+}
+
+
+.contenedor {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 100vh;
-    
 }
 
-.square{
-    width: calc(25vw - 4px); /* 25% del ancho de la ventana gráfica, menos 4px de los bordes */
-    max-width: 300px; /* Máximo de 300px para evitar que los elementos sean demasiado grandes */
-    height: calc(25vw - 4px); /* La misma altura que el ancho para mantener la proporción */
+
+
+.square {
+    width: calc(25vw - 4px);
+    /* 25% del ancho de la ventana gráfica, menos 4px de los bordes */
+    max-width: 300px;
+    /* Máximo de 300px para evitar que los elementos sean demasiado grandes */
+    height: calc(25vw - 4px);
+    /* La misma altura que el ancho para mantener la proporción */
     box-shadow: 3px 4px 8px 8px rgba(0, 0, 0, 0.3);
-    box-sizing: border-box; /* Asegura que el borde esté incluido en el tamaño total */
+    box-sizing: border-box;
+    /* Asegura que el borde esté incluido en el tamaño total */
     border-radius: 5px;
     display: flex;
-    justify-content: center; /* Centra horizontalmente el contenido */
-    align-items: center; /* Centra verticalmente el contenido */
+    justify-content: center;
+    /* Centra horizontalmente el contenido */
+    align-items: center;
+    /* Centra verticalmente el contenido */
     background-color: #2E3336;
     color: white;
-    transition: all 0.3s ease; /* Transición suave */
+    transition: all 0.3s ease;
+    /* Transición suave */
 
 }
 
@@ -27,10 +93,11 @@
     /* Aumenta el tamaño del contenido al 110% */
 }
 
-a{
+a {
     text-decoration: none;
 }
 
 a:visited {
-    color: inherit; /* O cualquier otro color que desees */
+    color: inherit;
+    /* O cualquier otro color que desees */
 }

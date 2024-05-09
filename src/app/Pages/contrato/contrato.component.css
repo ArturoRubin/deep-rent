@@ -1,0 +1,24 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.contract {
+    width: 600px;
+    margin: auto;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border: 1px solid #e7e7e7;
+    border-radius: 5px;
+}
+
+.contract h2 {
+    text-align: center;
+}
+
+.contract p {
+    margin-bottom: 20px;
+}
+
+.contract .details {
+    font-weight: bold;
+}

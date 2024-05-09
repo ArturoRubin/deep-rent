@@ -1,7 +1,43 @@
-.padre {
+.abuelo{
+    display: flex;
+    justify-content: space-around;
+}
+
+.texto-asesoramiento {
+    background-color: #f2f2f2; /* Color de fondo */
+    padding: 20px;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    justify-content: center;
+ 
+    
+}
+
+.texto-asesoramiento h2 {
+    color: #333; /* Color del texto */
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.deep {
+    color: #FF874A; /* Color verde para DeepRent */
+}
+
+.texto-asesoramiento p {
+    color: #666; /* Color del texto */
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+
+.padre {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    width: 700px;
+
 }
 
 .contenedor {
@@ -23,10 +59,25 @@
     padding: 0 20px; /* Añade un padding a los lados de cada campo de formulario */
 }
 
-h2{
-    padding-top: 20px;
-    text-align: center;
+
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    background-color: #FF874A; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
+
+button:hover {
+    background-color: #fb5908; /* Cambio de color de fondo al pasar el ratón */
+    color: #fff; /* Cambio de color del texto al pasar el ratón */
+}
+
 
 .spinner-container {
     position: fixed;

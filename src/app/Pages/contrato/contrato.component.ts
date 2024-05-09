@@ -8,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './contrato.component.css'
 })
 export class ContratoComponent {
-
+  
+  aceptarContrato() {
+    alert('Has aceptado el contrato');
+   
+  }
 }
