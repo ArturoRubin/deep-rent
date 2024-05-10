@@ -1,0 +1,60 @@
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+.support {
+    margin-top: 20px;
+}
+
+.support .actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.support .actions a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.support .tickets {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.ticket {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.ticket:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.ticket .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ticket .info .title {
+    font-weight: bold;
+}
+
+.ticket .info .status {
+    color: #f00; /* Color para los tickets abiertos */
+}

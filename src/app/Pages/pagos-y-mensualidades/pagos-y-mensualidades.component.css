@@ -1,0 +1,41 @@
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+.payments {
+    margin-top: 20px;
+}
+
+.payment {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+}
+
+.payment:last-child {
+    margin-bottom: 0;
+}
+
+.payment .info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.payment .info .title {
+    font-weight: bold;
+}
+
+.payment .info .status {
+    color: #f00; /* Color para los pagos vencidos */
+}

@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.calendar {
+    max-width: 600px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.month {
+    padding: 10px;
+}
+
+.month-header {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.weekdays {
+    display: flex;
+    justify-content: space-around;
+}
+
+.weekday {
+    width: 14.28%; /* Para distribuir uniformemente los días de la semana */
+    text-align: center;
+}
+
+.days {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+}
+
+.day {
+    width: 14.28%; /* Para distribuir uniformemente los días de la semana */
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.rented {
+    background-color: #ffc; /* Color para los días con máquinas rentadas */
+}
+
+.reserved {
+    background-color: #ccf; /* Color para los días con máquinas apartadas */
+}

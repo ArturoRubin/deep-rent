@@ -1,0 +1,45 @@
+/* Estilos previamente definidos */
+
+.clients {
+    margin-top: 20px;
+}
+
+.client {
+    margin-bottom: 20px;
+}
+
+.client:last-child {
+    margin-bottom: 0;
+}
+
+.leased-machines {
+    padding-left: 20px;
+}
+
+.machine {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+}
+
+.machine:last-child {
+    margin-bottom: 0;
+}
+
+.contract,
+.payments {
+    margin-top: 10px;
+}
+
+.contract a,
+.payments a {
+    text-decoration: none;
+    color: blue;
+}
+
+.contract a:hover,
+.payments a:hover {
+    text-decoration: underline;
+}

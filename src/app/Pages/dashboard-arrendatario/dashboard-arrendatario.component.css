@@ -6,6 +6,7 @@ body {
 
 .padre {
     display: flex;
+
 }
 
 .navbar {
@@ -13,7 +14,8 @@ body {
     width: 200px;
     height: 100vh; /* Esto asegura que el menú ocupe toda la altura de la ventana */
     padding-top: 20px;
-    position: sticky; /* Esto mantiene el menú fijo en la pantalla mientras se desplaza */
+    position: fixed; /* Esto mantiene el menú fijo en la pantalla mientras se desplaza */
+    position: sticky;
 }
 
 .navbar a {
@@ -30,5 +32,5 @@ body {
 
 .dashboard {
     flex: 1; /* Esto hace que el panel de control ocupe el espacio restante */
-    padding-left: 40px; /* Esto asegura que el contenido del panel de control no esté oculto debajo del menú */
+    padding-left: 20px;
 }

@@ -13,9 +13,17 @@ import { PrecontratoComponent } from './Pages/precontrato/precontrato.component'
 import { ContratoComponent } from './Pages/contrato/contrato.component';
 import { DashbordArrendadorComponent } from './Pages/dashbord-arrendador/dashbord-arrendador.component';
 import { EjemploComponent } from './Pages/ejemplo/ejemplo.component';
-import { PruebaComponent } from './Pages/prueba/prueba.component';
 import { CasaComponent } from './Pages/casa/casa.component';
 import { TerminosCondicionesComponent } from './Pages/terminos-condiciones/terminos-condiciones.component';
+import { DashboardArrendatarioComponent } from './Pages/dashboard-arrendatario/dashboard-arrendatario.component';
+import { PagosYMensualidadesComponent } from './Pages/pagos-y-mensualidades/pagos-y-mensualidades.component';
+import { ManteniminetosComponent } from './Pages/manteniminetos/manteniminetos.component';
+import { ContratosComponent } from './Pages/contratos/contratos.component';
+import { SoporteComponent } from './Pages/soporte/soporte.component';
+import { MaquinasComponent } from './Pages/maquinas/maquinas.component';
+import { CalendarioComponent } from './Pages/calendario/calendario.component';
+import { SolicitudesDeAlquilerComponent } from './Pages/solicitudes-de-alquiler/solicitudes-de-alquiler.component';
+import { ContratosPagosComponent } from './Pages/contratos-pagos/contratos-pagos.component';
 
 export const routes: Routes = [
     { path: '', component: MainComponent, pathMatch: 'full' },
@@ -33,9 +41,20 @@ export const routes: Routes = [
     {
         path: 'dashboard-arrendador', component: DashbordArrendadorComponent,
         children: [
-            { path: '', component: PruebaComponent, pathMatch: 'full' },
-            { path: 'ejemplo', component: EjemploComponent },
-            { path: 'casa', component: CasaComponent }
+            { path: '', component: MaquinasComponent, pathMatch: 'full' },
+            { path: 'calendario', component: CalendarioComponent },
+            { path: 'solicitudes-de-alquiler', component: SolicitudesDeAlquilerComponent },
+            { path: 'contratos-pagos', component: ContratosPagosComponent }
+
+        ]
+    },
+    {
+        path: 'dashboard-arrendatario', component: DashboardArrendatarioComponent,
+        children: [
+            { path: '', component: PagosYMensualidadesComponent, pathMatch: 'full' },
+            { path: 'mantenimientos', component: ManteniminetosComponent },
+            { path: 'contratos', component: ContratosComponent },
+            { path: 'soporte', component: SoporteComponent}
         ]
     },
     { path: 'terminosYcondiciones', component: TerminosCondicionesComponent}
