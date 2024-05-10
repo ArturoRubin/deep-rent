@@ -1,0 +1,95 @@
+.padre{
+    display: flex;  
+    
+}
+
+.pagos{
+    display: flex;
+    align-items: center;
+}
+
+.terminos {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    margin: 30px;
+    padding: 40px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    width: 50%;
+
+}
+h2 {
+    font-size: 24px;
+}
+p {
+    margin: 5px 0;
+}
+strong {
+    font-weight: bold;
+}
+#accept-checkbox {
+    margin-top: 20px;
+}
+#accept-checkbox-label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Cuadro Informativo*/
+.cuadro-reservar {
+    border-radius: 10px;
+    /* Ajusta el valor para redondear más o menos los vértices */
+    background-color: #ffffff;
+    /* Color de fondo del cuadro */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    /* Efecto de sombra */
+    padding: 15px;
+    width: 350px;
+    height: 350px;
+    text-align: center;
+    margin: 30px;
+}
+
+.fechas {
+    display: flex;
+    justify-content: space-between;
+}
+
+.penultima-fila {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ultima-fila {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ultima-fila {
+    display: flex;
+    justify-content: space-between;
+}
+
+.boton{
+
+    /* Ocupa el 90% del ancho del contenedor */
+    padding: 10px;
+    /* Añade un poco de padding para que el botón sea más grande */
+    border: none;
+    /* Elimina el borde por defecto del botón */
+    border-radius: 5px;
+    /* Redondea un poco los bordes del botón */
+    background-color: #FF874A;
+    /* Cambia el color de fondo del botón */
+    color: white;
+    /* Cambia el color del texto del botón */
+    cursor: pointer;
+    /* Cambia el cursor al pasar el ratón por encima del botón */
+    margin: 20px;
+    width: 100px;
+}
+
+.boton:hover {
+    background-color: #fe681c;
+    /* Cambia el color de fondo del botón al pasar el ratón por encima */
+}

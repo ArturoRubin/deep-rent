@@ -15,6 +15,7 @@ import { DashbordArrendadorComponent } from './Pages/dashbord-arrendador/dashbor
 import { EjemploComponent } from './Pages/ejemplo/ejemplo.component';
 import { PruebaComponent } from './Pages/prueba/prueba.component';
 import { CasaComponent } from './Pages/casa/casa.component';
+import { TerminosCondicionesComponent } from './Pages/terminos-condiciones/terminos-condiciones.component';
 
 export const routes: Routes = [
     { path: '', component: MainComponent, pathMatch: 'full' },
@@ -36,5 +37,6 @@ export const routes: Routes = [
             { path: 'ejemplo', component: EjemploComponent },
             { path: 'casa', component: CasaComponent }
         ]
-    }
+    },
+    { path: 'terminosYcondiciones', component: TerminosCondicionesComponent}
 ];

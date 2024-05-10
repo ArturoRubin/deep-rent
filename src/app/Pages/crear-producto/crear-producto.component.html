@@ -1,5 +1,5 @@
 
-<mat-stepper [linear]="isLinear" #stepper>
+<mat-stepper class="padre" [linear]="isLinear" #stepper>
     <mat-step [stepControl]="formInformacionGeneral">
         <form [formGroup]="formInformacionGeneral">
             <ng-template matStepLabel>Información General</ng-template>
@@ -75,11 +75,10 @@
                 <div>
                         <label for="fileUpload">Seleccionar imágenes:</label>
                         <input type="file" id="fileUpload" name="image" accept="image/*">
-                        <input type="button" value="Subir Imagen">
                 </div>
             </div>
-            <button class="submit" mat-raised-button color="primary">Siguiente</button>
         </form>
+        <button class="submit" mat-raised-button color="primary">Siguiente</button>
     </mat-step>
     <mat-step [stepControl]="formUbicacionDisponibilidad">
         <form [formGroup]="formUbicacionDisponibilidad">

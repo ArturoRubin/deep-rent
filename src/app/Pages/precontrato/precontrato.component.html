@@ -1,64 +1,129 @@
-<div class="div1">
-    <h1>Precontrato Perforadora Bauer BG 40</h1>
-</div>
-<div class="abuelo">
-    <div class="padre">
-        <div class="seccion1">
-            <div class="div2">
-                <h2>Datos del cliente</h2>
-                <div>
-                    <mat-form-field class="design">
-                        <mat-label>Nombre completo</mat-label>
-                        <input matInput>
-                    </mat-form-field>
+<mat-stepper orientation="vertical" [linear]="isLinear" #stepper>
+    <mat-step [stepControl]="firstFormGroup">
+        <form class="contenedor-realizar-apartado" [formGroup]="firstFormGroup">
+            <ng-template matStepLabel>Realizar Apartado</ng-template>
+            <p>Nosotros guardaremos este pago hasta asegurarnos que todo este correcto :)</p>
+            <div class="padre">
+                <div class="izquierda">
+                    <div class="cuadro-reservar">
+                        <div class="titulo">
+                            <h2> $19,899 MXN día</h2>
+                        </div>
+                        <div class="fechas">
+                            <div class="inicio">
+                                <h3>Fecha de Inicio</h3>
+                                <p>10/05/24</p>
+                            </div>
+                            <div class="finalizacion">
+                                <h3>Fecha de finalización</h3>
+                                <p>09/06/24</p>
+                            </div>
+                        </div>
+                        <div class="penultima-fila">
+                            <div class="izquierda">
+                                <a>$19,899 MXN x 30 días</a>
+                            </div>
+                            <div class="derecha">
+                                <p>$596,970 MXN</p>
+                            </div>
+                        </div>
+                        <div class="ultima-fila">
+                            <div class="izquierda">
+                                <p>Total antes de impuestos</p>
+                            </div>
+                            <div class="derecha">
+                                <p>$596,970 MXN</p>
+                            </div>
+                        </div>
+                        <div class="ultima-fila">
+                            <div class="izquierda">
+                                <p>Total después de impuestos</p>
+                            </div>
+                            <div class="derecha">
+                                <p>$693,923 MXN</p>
+                            </div>
+                        </div>
+                        <div class="ultima-fila">
+                            <div class="izquierda">
+                                <p>Porcentaje de apartado</p>
+                            </div>
+                            <div class="derecha">
+                                <p>10%</p>
+                            </div>
+                        </div>
+                        <div class="ultima-fila">
+                            <div class="izquierda">
+                                <p>Total apartado</p>
+                            </div>
+                            <div class="derecha">
+                                <p>$59,697 MXN</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <mat-form-field class="design">
-                        <mat-label>Nombre de la empresa (s/a)</mat-label>
-                        <input matInput>
-                    </mat-form-field>
+                <div class="payment-container">
+                    <h2>Transferencia Bancaria</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="card-number">Número de Tarjeta:</label>
+                            <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456">
+                        </div>
+                        <div class="form-group">
+                            <label for="expiry-date">Fecha de Vencimiento:</label>
+                            <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/AA">
+                        </div>
+                        <div class="form-group">
+                            <label for="cvv">CVV:</label>
+                            <input type="text" id="cvv" name="cvv" placeholder="123">
+                        </div>
+                        <button class="boton-pasarela" type="submit">Pagar Ahora</button>
+                    </form>
                 </div>
-                <div>
-                    <mat-form-field class="design">
-                        <mat-label>Dirección del proyecto</mat-label>
-                        <input matInput>
-                    </mat-form-field>
+                <div class="payment-details">
+                    <h2>Depósito bancario</h2>
+                    <div class="payment-info">
+                        <p><strong>Monto Total:</strong> $693,929.20 MXN</p>
+                        <p><strong>Total del Apartado:</strong> $59,697 MXN</p>
+                    </div>
+                    <div class="payment-instructions">
+                        <p>Por favor, realice su pago mediante un depósito bancario a la siguiente cuenta:</p>
+                        <p><strong>Banco:</strong> Banco Ejemplo</p>
+                        <p><strong>Número de Cuenta:</strong> 1234567890</p>
+                        <p><strong>Clabe Interbancaria:</strong> 012345678901234567</p>
+                        <p><strong>Beneficiario:</strong> DeepRent</p>
+                        <p>Es importante incluir el número de referencia proporcionado para identificar su pago.</p>
+                        <p><strong>Número de Referencia:</strong> 987654321</p>
+                        <p>Una vez realizado el pago, por favor envíe el comprobante de pago a
+                            <strong>pagosdeeprent.com</strong> para confirmación.</p>
+                    </div>
                 </div>
-                <div>
-                    <mat-form-field class="design">
-                        <mat-label>Teléfomo de contacto</mat-label>
-                        <input matInput>
-                    </mat-form-field>
-                </div>
+
             </div>
-        </div>
-        <div class="seccion2">
-            <div class="div3">
-                <h2>Detalles del proyecto</h2>
-                <div>
-                    <mat-form-field class="design">
-                        <mat-label>fecha de inicio del proyecto</mat-label>
-                        <input matInput>
-                    </mat-form-field>
-                </div>
-                <div>
-                    <mat-form-field class="design">
-                        <mat-label>Duración del proyecto</mat-label>
-                        <input matInput>
-                    </mat-form-field>
-                </div>
-                <div>
-                    <mat-form-field class="design">
-                        <mat-label>Fecha de finalización</mat-label>
-                        <input matInput>
-                    </mat-form-field>
-                </div>
+
+            <div>
+                <button mat-button matStepperNext>Next</button>
             </div>
+        </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup">
+        <form [formGroup]="secondFormGroup">
+            <ng-template matStepLabel>Fill out your address</ng-template>
+            <mat-form-field>
+                <mat-label>Address</mat-label>
+                <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY" required>
+            </mat-form-field>
+            <div>
+                <button mat-button matStepperPrevious>Back</button>
+                <button mat-button matStepperNext>Next</button>
+            </div>
+        </form>
+    </mat-step>
+    <mat-step>
+        <ng-template matStepLabel>Done</ng-template>
+        <p>You are now done.</p>
+        <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button (click)="stepper.reset()">Reset</button>
         </div>
-    </div>
-</div>
-<div class="boton">
-    <a routerLink="/contrato-bauerg40">
-        <button mat-stroked-button color="primary">Generar contrato</button>
-    </a>
-</div>
+    </mat-step>
+</mat-stepper>

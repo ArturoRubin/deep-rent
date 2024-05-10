@@ -1,34 +1,148 @@
-.div1 {
+/* Realizar Apartado */
+.padre{
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+/* Pasarela de pagos */
+.payment-container {
+    max-width: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+
+  }
+  
+  .payment-container h2 {
+    margin-top: 0;
+    font-size: 24px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  .boton-pasarela {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .boton-pasarela:hover {
+    background-color: #45a049;
+  }
+
+  /* Cuadro informativo */
+  .cuadro-reservar {
+    border-radius: 10px;
+    /* Ajusta el valor para redondear más o menos los vértices */
+    background-color: #ffffff;
+    /* Color de fondo del cuadro */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    /* Efecto de sombra */
+    padding: 15px;
+    width: 350px;
+    height: 350px;
     text-align: center;
-    margin-bottom: 20px; /* Espacio adicional debajo del título */
 }
 
-.abuelo {
+.fechas {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
 }
 
-.padre {
+.penultima-fila {
     display: flex;
-    flex-direction: column; /* Cambiar a disposición de columnas */
-    background-color: #f0f0f0; /* Color de fondo más suave */
-    justify-content: center;
-    width: 600px;
-    padding: 20px; /* Añadir relleno para separar los elementos del borde */
-    border-radius: 8px; /* Borde redondeado */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    justify-content: space-between;
 }
 
-.seccion1, .seccion2 {
-    margin-bottom: 20px; /* Espacio adicional entre secciones */
+.ultima-fila {
+    display: flex;
+    justify-content: space-between;
 }
 
-.design {
-    width: 100%; /* Ancho completo para los campos de entrada */
+.boton,
+.texto-cobro {
+    width: 100%;
+    /* Expande los divs internos al 100% del ancho del padre */
+    text-align: center;
+    /* Centra el texto dentro de los divs */
+}
+.boton button {
+    width: 90%;
+    /* Ocupa el 90% del ancho del contenedor */
+    padding: 10px;
+    /* Añade un poco de padding para que el botón sea más grande */
+    border: none;
+    /* Elimina el borde por defecto del botón */
+    border-radius: 5px;
+    /* Redondea un poco los bordes del botón */
+    background-color: #FF874A;
+    /* Cambia el color de fondo del botón */
+    color: white;
+    /* Cambia el color del texto del botón */
+    cursor: pointer;
+    /* Cambia el cursor al pasar el ratón por encima del botón */
+    margin: 20px;
 }
 
-.boton {
-    text-align: center; /* Centrar el botón */
-    margin-top: 20px; /* Espacio adicional encima del botón */
+.boton button:hover {
+    background-color: #fe681c;
+    /* Cambia el color de fondo del botón al pasar el ratón por encima */
 }
 
+/* Depósito bancario*/
+.payment-details {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+
+}
+
+.payment-details h2 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+.payment-info p {
+    margin: 5px 0;
+}
+
+.payment-info strong {
+    font-weight: bold;
+}
+
+.payment-instructions p {
+    margin: 10px 0;
+}
+
+
+
+
+  
