@@ -85,16 +85,20 @@
         </div>
     </div>
     <div class="derecha">
+
         <div class="calendario">
             <mat-card class="demo-inline-calendar-card">
-                <mat-calendar [(selected)]="selected"></mat-calendar>
+                <mat-calendar [selected]="selected" [comparisonStart]="selected.start" [comparisonStart]="selected.end"></mat-calendar>
             </mat-card>
         </div>
         <div class="calendario">
-            <mat-card class="demo-inline-calendar-card">
+            <!-- <mat-card class="demo-inline-calendar-card">
                 <mat-calendar [(selected)]="selected"></mat-calendar>
-            </mat-card>
+            </mat-card> -->
         </div>
+
+
+
     </div>
 </div>
 <div class="parte3">
@@ -118,33 +122,35 @@
     <div>
         <mat-card class="example-card">
             <mat-card-header>
-              <div mat-card-avatar class="example-header-image"></div>
-              <mat-card-title>Mane</mat-card-title>
-              <mat-card-subtitle>Ciudad de México, México</mat-card-subtitle>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title>Mane</mat-card-title>
+                <mat-card-subtitle>Ciudad de México, México</mat-card-subtitle>
             </mat-card-header>
             <mat-card-content>
-              <p>
-                "La máquina estaba en excelentes condiciones y el propietario fue muy servicial con todas nuestras preguntas. ¡Una experiencia de alquiler sin problemas!"
-              </p>
+                <p>
+                    "La máquina estaba en excelentes condiciones y el propietario fue muy servicial con todas nuestras
+                    preguntas. ¡Una experiencia de alquiler sin problemas!"
+                </p>
             </mat-card-content>
             <mat-card-actions>
             </mat-card-actions>
-          </mat-card>
+        </mat-card>
     </div>
     <div>
         <mat-card class="example-card">
             <mat-card-header>
-              <div mat-card-avatar class="example-header-image"></div>
-              <mat-card-title>Arturo</mat-card-title>
-              <mat-card-subtitle>Ciudad de México, México</mat-card-subtitle>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title>Arturo</mat-card-title>
+                <mat-card-subtitle>Ciudad de México, México</mat-card-subtitle>
             </mat-card-header>
             <mat-card-content>
-              <p>
-                "La puntualidad y comunicación del propietario fueron impresionantes. La máquina funcionó a la perfección y nos ayudó a completar nuestro proyecto a tiempo."
-              </p>
+                <p>
+                    "La puntualidad y comunicación del propietario fueron impresionantes. La máquina funcionó a la
+                    perfección y nos ayudó a completar nuestro proyecto a tiempo."
+                </p>
             </mat-card-content>
             <mat-card-actions>
             </mat-card-actions>
-          </mat-card>
+        </mat-card>
     </div>
 </div>
